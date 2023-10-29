@@ -1,0 +1,10 @@
+<?php
+
+class EstoqueInsuficienteException  extends \DomainException
+{
+    public function __construct(float $quantidade, float $disponivel)
+    {
+        $mensagem = "A retirada do estoque  $quantidade é as $disponivel unidades em disponiveis em estoque.";
+        parent::__construct($mensagem);
+    }
+}
