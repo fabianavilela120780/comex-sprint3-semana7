@@ -1,10 +1,21 @@
 <?php
 
-class EstoqueInsuficienteException  extends \DomainException
-{
-    public function __construct(float $quantidade, float $disponivel)
+função  pública realizarCompra ( int  $ qtdeCompra ): void
     {
-        $mensagem = "A retirada do estoque  $quantidade é as $disponivel unidades em disponiveis em estoque.";
-        parent::__construct($mensagem);
+        tentar
+        {
+            if ( $ qtdeCompra <= 0 )
+            {
+                throw  new \ InvalidArgumentException (" Valor deve ser positivo ");
+            }
+        }
+
+        pegar ( \ InvalidArgumentException  $ e )
+        {
+            echo  $ e -> getMessage () . PHP_EOL ;
+        }
+
+        $ this -> comprasRealizadas += $ qtdeCompra ;
+
+        retornar ;        
     }
-}
