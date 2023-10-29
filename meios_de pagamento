@@ -1,0 +1,15 @@
+<?php
+
+require_once (__DIR__ . '/MeioDePagamento.php' );
+
+class  Pix  implementa  MeioDePagamento {
+    public  function  processarPagamento ( $ valor ) {
+        // Lógica para processar um pagamento via Pix
+        echo " Pagamento via Pix de R$ " . $ valor . " processado com sucesso. \n";
+    }
+
+    public  function  exibircomprovante ( $ valor ){
+        // Lógica para exibir um comprovante de pagamento via pix
+        echo " Comprovante de pagamento via Pix de R$ " . $ valor . "\n";
+    }
+}
